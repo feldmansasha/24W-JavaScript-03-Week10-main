@@ -12,7 +12,10 @@ let person={
     },
     interests:['swimming', 'skating', 'coding'],
     greetings: function (){
-        alert("Hello, I am ");
+        alert(`Hello, I am ${this.name}.`);
+    },
+    bio: function (){
+        return `The interest of ${this.name} of age ${this.age}, of gender ${this.interests}.`;
     }
 };
 
