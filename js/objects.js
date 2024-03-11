@@ -2,7 +2,19 @@ const output = document.getElementById('output');
 
 /* STEP 1: Create an object (looks a lot like declaring a variable, but with empty braces), 
 then open this page in a browser and enter 'person' in the console */
-let person={};
+let person={
+    age:80,
+    gender: "Male",
+    address:{
+        streetNo:100,
+        streetName:"Georgian Drive",
+        city:"Barrie"
+    },
+    interests:['swimming', 'skating', 'coding'],
+    greetings: function (){
+        alert("Hello, I am ");
+    }
+};
 
 /* STEP 2a: Add other data items to the above object, like name, age, gender, address, and interests */
 
