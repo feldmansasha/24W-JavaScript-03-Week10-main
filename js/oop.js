@@ -2,14 +2,38 @@ const output = document.getElementById('output');
 const output2 = document.getElementById('output2');
 
 /* STEP 1a: Create a new object using a regular function */
-
+function createNewPerson(firstName, lastName, age, interests){
+    let obj ={};
+    obj.name={
+        "firstName":firstName,
+        "lastName":lastName
+    };
+    obj.age=age;
+    obj.interests=interests;
+    obj.greetings=function(){
+        output.textContent=`Hello, I am ${this.name.firstName}.`;
+    }
+    return obj;
+}
 /* STEP 1b: Use the console to create a new person, and then invoke the function represented by .greeting() */
+let person1=createNewPerson("P1", "LP1", 20, ['swimming', "painting"]);
 
 /* STEP 2a: In order to be a bit more concise, JavaScript allows us to use constructor functions - 
 rewrite the above function, without returning anything. Capitalize the name of the function. */
-
+function Person (firstName, lastName, age, interests){
+    this.name={
+        "firstName":firstName,
+        "lastName":lastName
+    };
+    this.age=age;
+    this.interests=interests;
+    this.greetings=function(){
+        output.textContent=`Hello, I am ${this.name.firstName}.`;
+    }
+}
 /* STEP 2b: Use the console to create a couple of different people, using the 'new' keyword, 
 and again invoking the .greeting() method for each person */
+let person3=createNewPerson("P3", "LP3", 50, ['running', "painting"]);
 
 /* STEP 3a: Build the complete constructor for the object Person (comment out the above function first).
  Include name (first and last), age, gender, interests, bio (function), and greeting (function). */
