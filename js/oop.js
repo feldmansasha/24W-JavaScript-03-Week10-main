@@ -33,7 +33,7 @@ function Person (firstName, lastName, age, interests){
 }
 /* STEP 2b: Use the console to create a couple of different people, using the 'new' keyword, 
 and again invoking the .greeting() method for each person */
-let person3=createNewPerson("P3", "LP3", 50, ['running', "painting"]);
+let person3=new Person("P3", "LP3", 50, ['running', "painting"]);
 
 /* STEP 3a: Build the complete constructor for the object Person (comment out the above function first).
  Include name (first and last), age, gender, interests, bio (function), and greeting (function). */
@@ -46,14 +46,19 @@ let person3=createNewPerson("P3", "LP3", 50, ['running', "painting"]);
 // person1.bio()
 
 /* STEP 4a: Alternatively, you can use the Object() constructor to create an object. eg. car*/
-
+let car= new Object();
 /* STEP 4b: Once 'car' is created, add various properties and methods… */
-
+car.brand="honda";
+car.model="civic";
+car.fun=function(){
+    console.log(this.brand);
+}
 /* STEP 4c: Change some of the properties of 'car' in the console, then invoke the car.fun() function */
 
 /* STEP 5a: Yet another approach is to use the create() method. 
 Let's see how the above car object can be used to create another object */
-
+let anotherCar=Object.create(car);
+anotherCar.brand="toyota";
 /* STEP 5b: Output to the paragraph anotherCar.brand - you will see that it has retained the properties of the original object. */
 
 // That's it! Now on to Lab 3...
