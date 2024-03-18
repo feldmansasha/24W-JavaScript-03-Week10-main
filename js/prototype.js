@@ -4,7 +4,12 @@ const output = document.getElementById('output');
 then open this page in a browser and enter 'Coffee' in the console */
 // Coffee object constructor with size, boolean decaf, cream and sugar quantity
 // methods: decaffeinated and description
-
+function Coffee(size, isDecaf, qtyCream, qtySugar){
+    this.size=size;
+    this.isDecaf=isDecaf;
+    this.qtyCream=qtyCream;
+    this.qtySugar=qtySugar;
+}
 /* STEP 2: Instatiate a coffee based on the above constructor function */
 
 /* STEP 3: Refresh the page, and in the console, begin to call a method on 

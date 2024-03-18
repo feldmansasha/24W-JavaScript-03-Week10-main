@@ -96,3 +96,22 @@ const elem = document.getElementById('output'); // this accesses the Document ob
 // Next, open up oop.html and we will delve a bit deeper into JavaScript objects.
 
 // This page inspired by and adapted from https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics
+let sandwich3 = {
+
+    bread: 'multigrain',
+  
+    meat: 'sliced turkey',
+  
+    vegetables: {
+  
+      tomatoes: 'roma',
+  
+      lettuce: 'romaine',
+  
+      pickles: 'kosher dill'
+  
+    },
+  
+    spread: 'garlic mayonnaise'
+  
+  };
